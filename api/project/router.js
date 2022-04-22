@@ -5,6 +5,7 @@ const Project = require('./model')
 const projectRouter = express.Router()
 
 projectRouter.get('/', (req, res, next) => {
+    
     Project.getProjects()
         .then(projects => {
             res.status(200).json(projects);
