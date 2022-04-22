@@ -1,4 +1,8 @@
 // start your server here
+require('dotenv').config()
+console.log(process.env.NODE_ENV)
+// console.log(process.env)
+
 const server = require('./api/server.js');
 
 const PORT = process.env.PORT || 9000;
