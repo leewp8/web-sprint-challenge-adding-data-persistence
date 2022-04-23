@@ -29,7 +29,7 @@ afterAll(async () => {
   await db.destroy()
 })
 beforeEach(async () => {
-  await db.migrate.rollback()
+  // await db.migrate.rollback()
   await db.migrate.latest()
 })
 
