@@ -22,6 +22,7 @@ projectRouter.get('/', (req, res, next) => {
 projectRouter.post('/', (req, res, next) => {
     Project.createProject(req.body)
         .then(project => {
+            // const [project] = project
             res.status(201).json(project);
         })
         .catch(next);

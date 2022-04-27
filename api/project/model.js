@@ -15,7 +15,7 @@ function getProjects() {
 
 async function createProject(project) {
     const [project_id] = await db('projects').insert(project)
-    const [aProject] = await db('projects').where({ project_id })
+    const aProject = await db('projects').where({ project_id })
     return projectBool(aProject)
   }
 
